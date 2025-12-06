@@ -13,7 +13,10 @@ fn main() {
     let mut count = 0;
     let mut bunnies = 2;
 
-    // (write your `loop` here)
+    while bunnies <= 500 {
+        count += 1;
+        bunnies *= 2;
+    }
 
     println!(
         "Bunnies doubled {} times before there were more than 500",
@@ -24,8 +27,16 @@ fn main() {
     // and add them all together (add each value to the `sum` variable).  Hint: You should get 255
 
     let mut sum = 0;
+    let mut num = 7;
 
-    // (write the `for` loop here)
+    loop {
+        sum += num;
+        num += 1;
+
+        if num > 23 {
+            break;
+        }
+    }
 
     println!("The sum is {}", sum);
 
@@ -42,7 +53,9 @@ fn main() {
     let mut fives: Vec<i32> = vec![];
     let mut number = 5;
 
-    // (write the `while` loop here)
+    for x in 1..=12 {
+        fives.push(number * x)
+    }
 
     println!("Here are the first 12 multiples of 5: {:?}", fives);
 
@@ -57,7 +70,13 @@ fn main() {
     let mut total = 0;
     let numbers = vec![0, 1, 2, 3, 4, 5];
     for number in numbers {
-        // (write your `if/else` expression here)
+        if number == 0 {
+            total += 7;
+        } else if number == 1 || number == 2 {
+            total += 30;
+        } else {
+            total -= 5;
+        }
     }
 
     println!("The total is {}", total);
